@@ -1,7 +1,5 @@
 package com.example.models;
 
-import com.example.Main;
-
 public class Admin extends User {
     
     public Admin(String name, String email){
@@ -12,7 +10,7 @@ public class Admin extends User {
         if(p == null)
         return false;
 
-        Main.dbProducts.add(p);
+        //Cart.products.add(p);
         return true;
     }
 }

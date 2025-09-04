@@ -1,5 +1,11 @@
 package com.example.models;
 
-public class PaymentCard {
+import com.example.models.abstracts.Payment;
+
+public class PaymentCard extends Payment{
     
+    @Override
+    public void processPayment(){
+        
+    }
 }
