@@ -1,0 +1,71 @@
+*{
+    background-color: rgb(90, 90, 90) ;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    padding: 0%;
+    padding-left: 2%;
+    margin: 0;
+    height: 10vh;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    height: 10vh;
+}
+
+.main{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 50% 50%;
+    row-gap: 10%;
+    padding: 5vh;
+}
+
+.itemCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    border: solid;
+    border-radius: 1vh;
+    width: 40%;
+    height: 20vh;
+}
+
+.itemCardTitle{
+    font-size: x-large;
+    text-align: center;
+    border-bottom: solid;
+    width: 100%;
+}
+
+.itemCardSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+}
+
+.itemCardPart{
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
