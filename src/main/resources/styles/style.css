@@ -1,17 +1,23 @@
-*{
-    background-color: rgb(90, 90, 90) ;
+* {
+    background-color: rgb(90, 90, 90);
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-header{
+header {
     display: flex;
     justify-content: baseline;
     align-items: center;
@@ -22,7 +28,7 @@ header{
     height: 10vh;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,33 +36,35 @@ footer{
     height: 10vh;
 }
 
-.main{
+.main {
+    flex: 1;
     display: grid;
     justify-items: center;
     grid-template-columns: 50% 50%;
     row-gap: 10%;
     padding: 5vh;
+    overflow-y: scroll;
 }
 
-.itemCard{
+.itemCard {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     align-items: center;
     border: solid;
     border-radius: 1vh;
-    width: 40%;
+    width: 60%;
     height: 20vh;
 }
 
-.itemCardTitle{
+.itemCardTitle {
     font-size: x-large;
     text-align: center;
     border-bottom: solid;
     width: 100%;
 }
 
-.itemCardSection{
+.itemCardSection {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +73,7 @@ footer{
     width: 100%;
 }
 
-.itemCardPart{
+.itemCardPart {
     padding-left: 1vh;
     padding-right: 1vh;
 }
