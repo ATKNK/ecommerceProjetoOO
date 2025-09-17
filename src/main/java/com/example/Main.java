@@ -1,10 +1,12 @@
 package com.example;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import freemarker.template.Configuration;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
+import io.javalin.rendering.template.JavalinFreemarker;
 
 public class Main {
 
@@ -19,6 +21,7 @@ public class Main {
             config.staticFiles.add(staticFiles -> {
                 staticFiles.directory = "/public";
                 staticFiles.location = Location.CLASSPATH;
+                config.fileRenderer(new JavalinFreemarker(cfg));
             });
         }).start(7070);
 
@@ -26,7 +29,12 @@ public class Main {
         hashMap.put("product", "Object");
 
         app.get("/", ctx-> {
-            ctx.redirect("index.html");
+            Map<String, String> model = Map.of("name", "Professor Luiz");
+            ctx.render("index.html", model);
+        });
+
+        app.get("/create", ctx->{
+            ctx.render("create.ftl");
         });
 
         app.get("/tads24", ctx -> ctx.result("TADS24 é uma turma exepcionalmente legal"));
